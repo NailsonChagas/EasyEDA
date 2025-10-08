@@ -1,7 +1,3 @@
-Aqui está o texto revisado, formatado em **markdown** e com pequenas correções e complementos técnicos:
-
----
-
 # Montagem de PCB usando EasyEDA — Dia 1
 
 > **Observação:** o projeto do circuito eletrônico **não será abordado neste curso**. O foco será o processo de **criação, roteamento e montagem** da placa de circuito impresso (PCB).
