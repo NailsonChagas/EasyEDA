@@ -1,36 +1,71 @@
-Projeto do circuito eletronico não será aborado nesse curso
+Aqui está o texto revisado, formatado em **markdown** e com pequenas correções e complementos técnicos:
 
-Etapas do curso:
-1. Esquematico do circuito no EasyEDA
-2. Fazer as routes (rotas) da PCB
-3. Confecção da placa (transferencia termica + corrosão)
-4. Montagem e teste
+---
 
-Da etapa 1 para 2 é importante checar o DRC (Menu design)
+# Montagem de PCB usando EasyEDA — Dia 1
 
-Conceitos importantes:
-- footprint -> como o componente fica da placa
-    - SOP
-    - SO
-    - PDIP
-    - DIP
-    - SOIC
-- th -> through-hole -> furado (que tem que usar socket ou furar a placa) 
-- smd -> Surface-mount technology -> sentado em cima da placa, menor que th e mais baratos, mas com dificuldade maior de manusear
+> **Observação:** o projeto do circuito eletrônico **não será abordado neste curso**. O foco será o processo de **criação, roteamento e montagem** da placa de circuito impresso (PCB).
 
+---
 
-Circuito a ser montado será um VU meter
-- Componentes a serem usados:
-    - TL082CP
-    - th 
+## Etapas do curso
 
-Um esquematico pode ter mais de uma folha, circuitos complexos podem ser divididos para facilitar o desenvolvimento, no curso sera usado uma folha apenas
+1. **Criação do esquemático** do circuito no EasyEDA
+2. **Roteamento (routes)** da PCB
+3. **Confecção da placa** (transferência térmica + corrosão)
+4. **Montagem e teste** dos componentes na PCB
 
-Comandos importantes:
-- P -> place -> abre menu ne inserção de componentes padrões
-- P + P -> interface para procura de componentes em forncedores
+> ⚙️ **Dica:** Antes de passar do esquemático (etapa 1) para o roteamento (etapa 2), **verifique o DRC** (*Design Rule Check*) no menu **Design**, para evitar erros de ligação e sobreposição.
 
+---
 
-Na hora de colocar componentes: 
-- X.1, X.2 -> mesmo componente X mas em canais diferentes (mesmo ci pode ter mais de um componente)
-- Numeros nos componentes indicam qual a porta no componente 
+## Conceitos importantes
+
+* **Footprint:** representa **como o componente é montado fisicamente na placa** (a disposição de seus terminais e dimensões).
+  Exemplos de tipos de encapsulamento:
+
+  * **SOP** — Small Outline Package
+  * **SO** — Small Outline
+  * **PDIP** — Plastic Dual Inline Package
+  * **DIP** — Dual Inline Package
+  * **SOIC** — Small Outline Integrated Circuit
+
+* **TH (Through-Hole):** componentes **com terminais furados**, que atravessam a placa.
+
+  * Mais fáceis de soldar manualmente.
+  * Costumam exigir o uso de **soquetes (sockets)** ou **perfuração** da placa.
+
+* **SMD (Surface-Mount Device):** tecnologia de **montagem superficial**, em que os componentes ficam “sentados” sobre a placa.
+
+  * Menores e mais baratos que os TH.
+  * Mais difíceis de manusear e soldar manualmente.
+
+---
+
+## Circuito a ser montado
+
+O circuito escolhido para este curso será um **VU Meter** (indicador de nível de sinal).
+
+**Componentes principais:**
+
+* **TL082CP** (amplificador operacional duplo)
+* **Versão TH (Through-Hole)** dos componentes
+
+> Um esquemático pode conter **mais de uma folha (sheet)**. Em projetos complexos, isso facilita a organização.
+> Neste curso, utilizaremos **apenas uma folha**.
+
+---
+
+## Comandos importantes no EasyEDA
+
+* **P → Place:** abre o menu de **inserção de componentes padrões**.
+* **P + P:** abre a **interface de busca de componentes** em fornecedores integrados (ex.: LCSC).
+
+---
+
+## Dicas ao inserir componentes
+
+* **X.1, X.2, X.3…** → indicam **instâncias diferentes** de um mesmo componente (por exemplo, canais distintos de um mesmo CI).
+* Os **números nos pinos** indicam **qual porta ou terminal** corresponde àquele sinal no componente.
+
+> 🧩 Exemplo: O TL082 tem dois amplificadores internos (A e B). Assim, os símbolos **U1A** e **U1B** representam os dois canais do mesmo CI físico.
